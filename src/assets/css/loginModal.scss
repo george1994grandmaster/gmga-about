@@ -1,0 +1,185 @@
+.loginModal {
+  display: flex;
+  width: 40%;
+  padding: 60px 60px 100px 60px;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: white;
+  border-radius: 30px;
+
+  .loginModalHeader {
+    .closeLoginModalButton {
+      display: flex;
+      width: 20px;
+      height: 30px;
+      padding: 7px 15px;
+      border-width: 2px;
+
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  .loginForm {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .passwordRecoveredLabel {
+      font-size: 14px;
+      font-weight: 700;
+      color: $primary;
+    }
+
+    .modalLabel {
+      font-weight: 700;
+      font-size: 20px;
+      color: $primary;
+      font-family: $mainFont;
+      margin-bottom: 20px;
+    }
+
+    .loginInputsContainer {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      row-gap: 10px;
+
+      .singleInputContainer {
+        display: flex;
+        width: 90%;
+        position: relative;
+        align-items: center;
+
+        .loginInput {
+          width: 100%;
+          font-size: 13px;
+          padding: 16px 20px;
+          border-radius: 45px;
+          border: 2px solid $darkGrey;
+          color: $primary;
+          background-color: #f7f7f7;
+          font-weight: 700;
+          font-family: $mainFont;
+        }
+
+        .loginInput::placeholder {
+          color: $darkGrey;
+          opacity: 1;
+        }
+
+        .forgotPasswordButton {
+          position: absolute;
+          margin: 16px 20px 16px 0;
+          border: none;
+          font-size: 13px;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-family: $mainFont;
+          border-radius: 5px;
+          background-color: transparent;
+          color: $primary;
+          right: 0px;
+          z-index: 2;
+        }
+      }
+
+      .passwordRecoveryLabel {
+        font-size: 14px;
+        font-weight: 400;
+        color: $primary;
+        margin-top: 15px;
+      }
+
+      .errorMessageLabel {
+        font-size: 11px;
+        color: red;
+        text-transform: uppercase;
+      }
+    }
+
+    .submitLoginForm {
+      display: flex;
+      margin-top: 30px;
+      width: 90%;
+      background-color: $primary;
+      padding: 16px;
+      align-items: center;
+      border-radius: 45px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      justify-content: center;
+      border: none;
+      font-family: $mainFont;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .loginModal {
+    width: 70%;
+  }
+}
+
+@media (max-width: 769px) {
+  .loginModal {
+    width: 100%;
+    padding: 60px 20px 100px 20px;
+    border-radius: 0px;
+
+    .singleInputContainer {
+      width: 100%;
+
+      .loginInput {
+        width: 100%;
+      }
+    }
+
+    .loginForm {
+      .submitLoginForm {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .loginModal {
+    padding: 60px 10px 100px 10px;
+
+    .loginForm {
+      .passwordRecoveredLabel {
+        font-size: 11px;
+      }
+
+      .modalLabel {
+        font-size: 18px;
+      }
+
+      .loginInputsContainer {
+        .singleInputContainer {
+          width: 100%;
+
+          .loginInput {
+            border-radius: 45px;
+          }
+        }
+
+        .passwordRecoveryLabel {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

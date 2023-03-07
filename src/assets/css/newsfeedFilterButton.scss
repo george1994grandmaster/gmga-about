@@ -1,0 +1,34 @@
+.newsfeedFilterButtonDark {
+  background-color: $primary;
+  color: $light;
+}
+
+.newsfeedFilterButtonLight {
+  background-color: $light;
+  color: $primary;
+}
+
+.newsfeedFilterButton {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 45px;
+  height: 45px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: $mainFont;
+
+  .filterButtonIcon {
+    display: flex;
+    width: auto;
+    height: 15px;
+    margin-right: 10px;
+  }
+
+  .filterButtonIconSelected {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(18%) saturate(7395%)
+      hue-rotate(221deg) brightness(85%) contrast(97%);
+  }
+}

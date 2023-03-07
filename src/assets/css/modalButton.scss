@@ -1,0 +1,20 @@
+.modalButton {
+  width: 100px;
+  border-radius: 45px;
+  border: 2px solid $primary;
+  background-color: $light;
+  padding: 10px 0;
+  box-shadow: 0px 3px 0px 0px $primary;
+  color: $primary;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  font-family: $mainFont;
+  font-weight: 900;
+  font-size: 18px;
+
+  @media (max-width: 769px) {
+    font-weight: 900;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,199 @@
+.formLoginWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.resetPassword {
+  background-color: transparent;
+  border: none;
+}
+
+.newPassword {
+  margin: 20px 0 45px 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.checkEmail {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.popupWrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  visibility: hidden;
+
+  &.show {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    visibility: visible;
+    background: rgba(234, 231, 231, 0.73);
+    z-index: 9998;
+
+    .loginFormContainer {
+      transition: all 0.3s ease-in-out;
+      transform: scale(1);
+    }
+  }
+}
+
+.popupContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loginFormContainer {
+  margin: 0 auto;
+  padding: 40px;
+  background-color: $light;
+  box-shadow: 0px 4px 4px rgba(41, 56, 150, 0.1);
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+
+.formCloseBtn {
+  border: none;
+  background-color: transparent;
+}
+
+.formLoginContent {
+  position: relative;
+  padding: 40px 25px;
+}
+
+.backToLogin {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  padding: 8px 15px;
+  border-radius: 28px;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  background: $primary;
+  color: $light;
+}
+
+.signBtn {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 28px;
+  background-color: $primary;
+  color: $light;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: $mainFont;
+}
+
+.loginTitle {
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: $mainFont;
+  text-align: center;
+}
+
+.loginFormFlexible {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loginCol {
+  width: 100%;
+  margin-bottom: 10px;
+
+  &.sbmCol {
+    margin: 30px 0;
+  }
+
+  input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e5e5e5;
+    border-radius: 45px;
+    color: $primary;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $mainFont;
+
+    &::placeholder {
+      color: $primary;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: $mainFont;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $primary;
+    color: $light;
+    cursor: pointer;
+  }
+}
+
+.passwordReset {
+  width: 100%;
+  text-align: right;
+  margin: 15px 0;
+  padding-right: 15px;
+
+  span {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+.formLoginText {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 1500px) {
+  .formLoginWrap {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .formLoginWrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginFormContainer {
+    margin: 0 auto;
+    padding: 40px 10px;
+    box-shadow: 0px 4px 4px rgba(41, 56, 150, 0.1);
+    border-radius: 30px;
+  }
+
+  .formLoginContent {
+    padding: 40px 10px;
+  }
+
+  .loginCol {
+    input {
+      padding: 14px 14px;
+    }
+  }
+}

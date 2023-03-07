@@ -1,0 +1,49 @@
+.handleResultItem {
+  display: flex;
+  color: $primary;
+  align-items: center;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  .viewIcon {
+    margin: 0;
+    padding: 0;
+    margin-right: 6px;
+    margin-top: 1px;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .handleCount {
+    font-size: 14px;
+    font-weight: 400;
+    color: $grey;
+  }
+
+  .viewIconBlue {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(84%) saturate(1902%) hue-rotate(221deg) brightness(71%) contrast(93%);
+  }
+
+  .viewIconGray {
+    filter: invert(56%) sepia(64%) saturate(13%) hue-rotate(7deg) brightness(98%) contrast(93%);
+  }
+}
+
+@media (max-width: 769px) {
+  .handleResultItem {
+    .viewIcon {
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    .handleCount {
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.forumPinnedInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $light;
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+
+  .recentMediaContainer {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    width: 80%;
+
+    .seeAllButtonContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+  }
+
+  .infoLabel {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    color: $primary;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .recentMediaInfoLabel {
+    margin-top: 60px;
+  }
+
+  .pinnedAnnouncement {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    border-top: 1px solid $primary;
+    width: 80%;
+  }
+}

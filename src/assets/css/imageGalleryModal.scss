@@ -1,0 +1,97 @@
+.imageGalleryModal {
+    position: relative;
+
+    .closeModalButtonContainer {
+        display: flex;
+        position: absolute;
+        z-index: 9999999999;
+        width: 100%;
+
+        .closeModalButton {
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+            margin: 15px;
+            opacity: 0.7;
+            border: none;
+
+            img {
+                filter: invert(95%) sepia(0%) saturate(7479%) hue-rotate(183deg) brightness(107%) contrast(103%);
+
+            }
+        }
+
+        .closeModalButton:hover {
+            opacity: 1;
+        }
+    }
+
+    .swiperContainer {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 60px;
+            opacity: 0.7;
+        }
+
+        .hideButtonNext {
+            .swiper-button-next {
+                display: none;
+            }
+
+        }
+
+        .hideButtonPrev {
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            opacity: 1;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
+
+        .swiper-button-next {
+            background-image: url('/assets/images/nextButton.svg');
+            background-size: 50px 50px;
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            background-image: url('/assets/images/previousButton.svg');
+            background-size: 50px 50px;
+        }
+
+        .swiper {
+            width: 100%;
+
+            .swiperSlide {
+                display: flex;
+                width: 100%;
+                background-color: black;
+                height: 100vh;
+
+                img {
+                    height: auto;
+                    width: 100%;
+                    object-fit: scale-down;
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: 769px) {
+        .closeModalButtonContainer {
+            justify-content: flex-end;
+        }
+    }
+}

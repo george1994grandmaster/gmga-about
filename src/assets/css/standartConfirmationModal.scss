@@ -1,0 +1,130 @@
+.standartConfirmationModalContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+
+    .standartConfirmationModalBackground {
+        position: absolute;
+        background-color: gray;
+        opacity: 0.6;
+        width: 100%;
+        height: 100%;
+    }
+
+    .confirmationModal {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        background-color: $light;
+        border-radius: 25px;
+        border: 2px solid $primary;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        padding: 30px 30px 35px 30px;
+
+        .confirmationModalLabel {
+            color: $primary;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: $mainFont;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+
+        }
+
+        .confirmationModalButtonsContainer {
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+
+            .confirmationModalButton {
+                font-size: 15px;
+                font-weight: 700;
+                color: $primary;
+                border: 2px solid $primary;
+                padding: 5px 12px;
+                background-color: $light;
+                border-radius: 25px;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .standartConfirmationModalContainer {
+        // position: fixed;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // z-index: 99999;
+
+        .standartConfirmationModalBackground {
+            // position: absolute;
+            // background-color: gray;
+            // opacity: 0.6;
+            // width: 100%;
+            // height: 100%;
+        }
+
+        .confirmationModal {
+            // display: flex;
+            // justify-content: flex-end;
+            // align-items: center;
+            // padding: 20px;
+            // background-color: $light;
+            // border-radius: 25px;
+            // border: 2px solid $primary;
+            // flex-direction: column;
+            // position: relative;
+            // justify-content: center;
+            // padding: 30px 30px 35px 30px;
+            width: 100%;
+            border: none;
+            border-top: 2px solid $primary;
+            border-bottom: 2px solid $primary;
+            border-radius: 0px;
+
+            .confirmationModalLabel {
+                // color: $primary;
+                // font-size: 15px;
+                // font-weight: 700;
+                // font-family: $mainFont;
+                // margin-bottom: 25px;
+                // text-transform: uppercase;
+                text-align: center;
+            }
+
+            .confirmationModalButtonsContainer {
+                // display: flex;
+                // width: 30%;
+                // justify-content: space-between;
+                column-gap: 20px;
+                width: fit-content;
+
+                .confirmationModalButton {
+                    // font-size: 15px;
+                    // font-weight: 700;
+                    // color: $primary;
+                    // border: 2px solid $primary;
+                    // padding: 5px 12px;
+                    // background-color: $light;
+                    // border-radius: 25px;
+
+                }
+            }
+        }
+    }
+}

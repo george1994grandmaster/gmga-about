@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+@import "./scroll.scss";
+@import "./variables";
+@import "./about";
+@import "./header";
+@import "./footer.scss";
+@import "./home";
+@import "./colors";
+@import "./profile";
+@import "./spaces";
+@import "./deactivate.scss";
+@import "./mainButton.scss";
+@import "./modalButton.scss";
+@import "./deactivationFinished.scss";
+@import "./error.scss";
+@import "./settings.scss";
+@import "./changePassword.scss";
+@import "./visibilitySelect.scss";
+@import "./forum.scss";
+@import "./forumSidebar.scss";
+@import "./addPost.scss";
+@import "./searchInput.scss";
+@import "./newsfeedFilterButton.scss";
+@import "./singlePost.scss";
+@import "./postImageGallery.scss";
+@import "./comment.scss";
+@import "./commentForm.scss";
+@import "./editProfile.scss";
+@import "./login.scss";
+@import "./swiper.scss";
+@import "./postStatisticsIcon.scss";
+@import "./forumPinnedInfo.scss";
+@import "./postContent.scss";
+@import "./imageGalleryModal.scss";
+@import "./loginForm.scss";
+@import "./register.scss";
+@import "./passwordRecover.scss";
+@import "./loginModal.scss";
+@import "./profileCard.scss";
+@import "./addPostModal.scss";
+@import "./loading.scss";
+@import "./postFormInput.scss";
+@import "./standartConfirmationModal.scss";
+//  http://meyerweb.com/eric/tools/css/reset/
+//  v2.0 | 20110126
+//  License: none (public domain)
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: $darkLight;
+  font-family: $mainFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: $mainFont;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.main {
+  max-width: 2400px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.standardMargin {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+}
+
+.title {
+  font-family: $mainFont;
+}
+
+.text {
+  font-family: $mainFont;
+}
+
+.standartText {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: $mainFont;
+}
+
+.gmgaBanner {
+  position: absolute;
+  width: 100%;
+}
+
+.banner-large-text {
+  h1 {
+    letter-spacing: 8px;
+  }
+}
+
+.mountain-img-content {
+  width: 50%;
+}
+
+.border {
+  width: 100%;
+  height: 1.2px;
+  background-color: $primary;
+}
+
+.banner-large-text {
+  .danger-shadow {
+    text-shadow: 5px -6px #ee2346, -5px -6px #ee2346, 5px 10px #ee2346,
+      -5px 10px #ee2346;
+  }
+}
+
+.home-cards-title-content {
+  .danger-shadow {
+    letter-spacing: 8px;
+    // text-shadow: 0px 2px 0px #ee2346, 2px 0px 0px #ee2346, -2px 0px 0px #ee2346, 0px -2px 0px #ee2346;
+    text-shadow: #f50000 2px 0px 0px, #f30000 -2px 0px 0px, #f10000 0px 1px 0px,
+      #ef0000 0px -1px 0px, #ed0000 -2px 1px 0px, #eb0000 -2px -2px 0px,
+      #e90000 1px -2px 0px, #e70000 2px 2px 0px, #e50000 3px -2px 0px,
+      #e30000 -3px 2px 0px;
+    stroke: 2px;
+  }
+}
+
+.scrollerContent {
+  position: absolute;
+  right: -120px;
+}
+
+.scroller {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+@font-face {
+  font-family: "DejavuSans";
+  /*Can be any text*/
+  src: local("DejaVuSansCondensed"), url("../fonts/DejaVuSansCondensed.ttf") format("truetype");
+}
+
+@media (max-width: 1500px) {
+  .standartText {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .scrollerContent {
+    right: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .standartText {
+    font-size: 13px;
+  }
+
+  .scrollerContent {
+    top: 100%;
+  }
+
+  .showCards {
+    button {
+      margin: 30px 0 15px 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .scrollerContent {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .scrollerContent {
+    bottom: 25px;
+  }
+}
+
+@media (min-width: 720px) {
+  .scrollerContent {
+    bottom: 50px;
+  }
+}

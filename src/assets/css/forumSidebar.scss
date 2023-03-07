@@ -1,0 +1,55 @@
+.forumSidebarContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding-top: 20%;
+  padding-bottom: 40%;
+  padding-left: 20%;
+  padding-right: 40%;
+  background-color: $light;
+  border-radius: 15px;
+  row-gap: 40px;
+  margin-right: 20px;
+
+  .sidebarOption {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $primary;
+    font-family: $mainFont;
+    width: fit-content;
+  }
+
+  .selected {
+    position: relative;
+  }
+
+  .selected:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $red;
+    border-radius: 20px;
+    transform: translateY(50%);
+    width: 100%;
+  }
+
+  @media (max-width: 1250px) {
+    flex-direction: row;
+    padding: 0;
+    height: auto;
+    justify-content: space-between;
+    padding: 15px 50px 15px 50px;
+
+    .sidebarOption {
+      font-size: 14px;
+    }
+  }
+}

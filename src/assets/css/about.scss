@@ -1,0 +1,62 @@
+.aboutMainContainer {
+  padding-top: 130px;
+  padding-bottom: 150px;
+}
+
+.aboutBannerContent {
+  margin-bottom: 52px;
+}
+
+.missionText {
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: $mainFont;
+}
+
+.aboutOverSection {
+  margin-bottom: 70px;
+}
+
+.SliderOverText {
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.missionBannerContent {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.borderCenterd {
+  padding: 0 5%;
+}
+
+@media (max-width: 1500px) {
+  .missionText {
+    font-size: 16px;
+  }
+
+  .SliderOverText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .aboutMainContainer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 720px) {
+  .missionText {
+    font-size: 13px;
+  }
+
+  .SliderOverText {
+    font-size: 13px;
+  }
+}

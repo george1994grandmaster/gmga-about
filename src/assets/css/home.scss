@@ -1,0 +1,271 @@
+.banner-large-text {
+  position: relative;
+
+  h1 {
+    font-size: 130px;
+    font-weight: 900;
+  }
+}
+
+.homeCardImg {
+  display: block;
+  border-radius: 20px;
+
+  img {
+    // transition: all 0.5s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.home-banner-text {
+  margin: 50px 0 60px 0;
+}
+
+.home-banner-wrap {
+  position: relative;
+
+  .banner-inner-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+}
+
+.homeMainWrapper {
+  margin-bottom: 30px;
+}
+
+.homeMainInner {
+  padding: 60px 0;
+}
+
+.home-cards-title-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.home-cards-title {
+  font-size: 96px;
+  font-weight: 900;
+}
+
+.list-category-title {
+  margin-bottom: 20px;
+  color: $primary;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.category-button {
+  padding: 12px 20px;
+  border: 1px solid $primary;
+  border-radius: 30px;
+  color: $primary;
+}
+
+.list-category-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.categoryFilterButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 10px;
+
+  .skillsFilterButton {
+    font-weight: 900;
+    font-size: 15px;
+
+  }
+}
+
+.category-button {
+  padding: 12px 20px;
+  border: 2px solid $primary;
+  border-radius: 30px;
+  color: $primary;
+  background-color: $light;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: $mainFont;
+}
+
+.homeCardsWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 50px 0;
+}
+
+.homeCard {
+  margin-bottom: 73px;
+  // filter: drop-shadow(0px 4px 4px rgba(41, 56, 150, 0.26));
+
+  img {
+    border-radius: 20px;
+  }
+
+  &:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+}
+
+.homeCardTitle {
+  color: $primary;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.homeCardText {
+  color: $primary;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.skillsContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 5px;
+
+  .singleSkillContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    .skillButton {
+      font-size: 11px;
+      padding: 6px 10px;
+      border: 2px solid $primary;
+      border-radius: 30px;
+      background-color: $light;
+      color: $primary;
+      font-weight: 900;
+    }
+  }
+}
+
+.mainHomeContainer {
+  padding-top: $mainContainerPT;
+}
+.loadMoreGuidesButton{
+  margin: auto;
+  background-color: transparent;
+  border-width: 1px;
+  width: fit-content;
+}
+@media (max-width: 1400px) {
+  .singleSkillContainer {
+    button {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .standartText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .home-cards-content {
+    padding-bottom: 25px;
+  }
+
+  .list-category-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .categoryFilterButtonsContainer {
+    button {
+      margin-bottom: 15px;
+    }
+  }
+
+  .categoryButtons {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainHomeContainer {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .standartText {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 720px) {
+  .homeCard {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 10px;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+
+    img {
+      height: 40vw;
+      //border-radius: 20px;
+    }
+  }
+
+  .homeCardText {
+    padding-right: 40px;
+  }
+
+  .homeCardTitle {
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homeCard {
+    flex: 0 0 25%;
+    max-width: 25%;
+    //height: 500px;
+
+    img {
+      height: 18vw;
+    }
+
+    &:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  .homeCard {
+    img {
+      height: 25vh;
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0px 1000px #f3f3f3 inset;
+  -webkit-text-fill-color: #293896;
+}

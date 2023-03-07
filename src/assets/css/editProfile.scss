@@ -1,0 +1,468 @@
+.editProfileCoverPhoto {
+  height: 385px;
+}
+
+.editProfilePage {
+  display: flex;
+  flex-direction: column;
+
+  .editProfileMainUserBanner {
+    display: flex;
+    padding: 0 5%;
+    flex-direction: column;
+
+    .clickableCoverPhoto {
+      cursor: pointer;
+    }
+
+    .editCoverPhotoContainer {
+      display: flex;
+      object-fit: contain;
+      height: 385px;
+      position: relative;
+
+      img {
+        border-radius: 45px;
+        border: 2px solid $light;
+      }
+
+      .editProfileCoverIcon {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        width: 60vw;
+        top: 82%;
+        right: 3%;
+
+        .photoOptions {
+          &.visible::after {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            width: 14px;
+            height: 14px;
+            background-color: white;
+            top: -8px;
+            right: 20px;
+            transform: rotate(45deg);
+            border-top: 1px solid #293896;
+            border-left: 1px solid #293896;
+          }
+        }
+
+        .photoProfileCenter {
+          justify-content: flex-end;
+        }
+
+        .photoOptionsContent {
+          width: 100%;
+        }
+      }
+    }
+
+    .editProfilePhotoAndNameContainer {
+      display: flex;
+      flex-direction: row;
+
+      .editProfilePhotoContainer {
+        display: flex;
+        position: relative;
+        margin-top: -100px;
+        padding-left: 100px;
+
+        .editProfileImage {
+          display: flex;
+          position: relative;
+          width: 200px;
+          height: 200px;
+          border: none;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+          background-color: transparent;
+
+          img {
+            border-radius: 100px;
+            border: 3px solid $light;
+
+          }
+        }
+
+        .editProfilePhotoOptionsContainer {
+          position: absolute;
+          top: 65%;
+          right: -29vw;
+          width: 60vw;
+          // background-color: red;
+
+          .photoOptions {
+            &.visible::after {
+              content: "";
+              position: absolute;
+              z-index: 0;
+              width: 14px;
+              height: 14px;
+              background-color: white;
+              top: -8px;
+              left: calc(50% - 7px);
+              transform: rotate(45deg);
+              border-top: 1px solid #293896;
+              border-left: 1px solid #293896;
+            }
+          }
+
+          .photoOptionsContent {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .editNameContainer {
+        display: flex;
+        padding: 0px 5px 0px 20px;
+        //width: 100%;
+        height: 100px;
+        align-items: center;
+        margin-top: -20px;
+        justify-content: flex-start;
+
+        .editUpdateContent {
+          display: flex;
+          margin-right: 50px;
+          width: fit-content;
+          z-index: 9998;
+          //width: 90%;
+
+          input {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 25px;
+            border: none;
+            border-radius: 25px;
+            color: $primary;
+            font-weight: 900;
+            outline: none;
+            border: 1px solid #293896;
+            border-radius: 25px;
+          }
+
+        }
+
+        .editProfileUserName {
+          display: flex;
+          margin-right: 50px;
+          padding-top: 11px;
+          padding-left: 5px;
+          font-size: 40px;
+          font-weight: 900;
+          color: $primary;
+        }
+
+        .editProfileBtn {
+          display: flex;
+          border: none;
+          padding-top: 11px;
+          background-color: transparent;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          img {
+            width: 30px;
+            height: auto;
+          }
+        }
+
+
+      }
+    }
+  }
+
+
+  .editProfileUserSettings {
+    padding: 60px calc(5% + 100px) 100px calc(5% + 100px);
+
+    .editProfileActivitiesLabel {
+      font-family: $mainFont;
+      margin-bottom: 30px;
+      font-size: 25px;
+      font-weight: 700;
+      color: $primary;
+    }
+
+    .selectableSkillsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 50px;
+
+      .selectableSkill {
+        font-size: 14px;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .editFormContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: $primary;
+    font-size: 25px;
+    font-weight: 900;
+
+    .row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+
+    .col {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 10px;
+      border: 1px solid $primary;
+      border-radius: 25px;
+      background-color: $light;
+    }
+
+    .formColIcon {
+      width: 25px;
+      margin-left: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 25px;
+      color: $primary;
+      font-size: 13px;
+      font-weight: 400;
+
+      &::placeholder {
+        color: $primary;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: $mainFont;
+      }
+    }
+  }
+
+  .contactInfoTitle {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .formFlexibleBlock {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+
+  .editFormCol {
+    textarea {
+      width: 100%;
+      height: 378px;
+      padding: 20px;
+      border: 1px solid $light;
+      border-radius: 10px;
+      background-color: $light;
+      color: $primary;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: $mainFont;
+      box-shadow: 0px 4px 4px rgba(41, 56, 150, 0.05);
+      resize: none;
+    }
+
+    &.textAreaColumn {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  }
+
+
+
+  .editSbmBtn {
+    padding: 10px 16px;
+    border: 2px solid $primary;
+    border-radius: 28px;
+    background-color: $primary;
+    color: $middleLight;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: $mainFont;
+  }
+
+  .editSaveBtn {
+    width: 100%;
+    text-align: right;
+  }
+
+  .editFormCol {
+    label {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 60px;
+
+      label {
+        padding-right: 60px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+
+    .editProfileUserSettings {
+      padding: 60px calc(5% + 50px) 100px calc(5% + 50px);
+      padding-bottom: 50px;
+    }
+
+    .editProfileMainUserBanner {
+      .editProfilePhotoAndNameContainer {
+        .editProfilePhotoContainer {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 950px) {
+
+    .editProfileCoverPhoto {
+      height: 270px;
+    }
+
+    .editNameContainer {
+      padding: 0px 30px 0px 30px;
+    }
+
+
+    .editProfileUserSettings {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .editProfileMainUserBanner {
+      padding: 0px;
+
+      .editCoverPhotoContainer {
+        height: auto;
+
+        img {
+          border: none;
+        }
+      }
+
+      .editProfilePhotoAndNameContainer {
+        flex-direction: column;
+
+        .editProfilePhotoContainer {
+          margin-top: -150px;
+          padding-left: 20px;
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    .editProfileUserSettings {
+      padding-top: 10px;
+    }
+
+    .editProfileMainUserBanner {
+      padding: 0px;
+
+      .editCoverPhotoContainer {
+        img {
+          border: none;
+          border-radius: 0px;
+        }
+      }
+
+      .editProfilePhotoAndNameContainer {
+        flex-direction: column;
+
+        .editProfilePhotoContainer {
+          margin-top: -105px;
+          padding-left: 30px;
+          width: fit-content;
+
+          .editProfileImage {
+            width: 140px;
+            height: 140px;
+          }
+        }
+
+        .editNameContainer {
+          margin-top: -20px;
+          justify-content: space-between;
+          padding: 0 30px 0 30px;
+
+          .editUpdateContent {
+            input {
+              margin-top: 0px;
+              padding: 2.5px 5px 2.5 20px;
+              font-size: 17px;
+            }
+          }
+
+          .editProfileUserName {
+            margin-right: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            font-size: 20px;
+            text-transform: uppercase;
+          }
+
+          .editProfileBtn {
+            padding-top: 0px;
+
+            img {
+              padding-top: 0px;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  @media (max-width: 550px) {
+
+    .editFormCol {
+      label {
+        display: block;
+      }
+
+      &:nth-child(1) {
+        width: 100%;
+        margin-bottom: 60px;
+
+        label {
+          padding-right: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}

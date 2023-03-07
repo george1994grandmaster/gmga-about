@@ -1,0 +1,249 @@
+.commentContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-top: 20px;
+
+  .commenterProfileImageContainer {
+    display: flex;
+    position: relative;
+
+    .cornerLine {
+      width: 30px;
+      height: 30px;
+      border-radius: 0 0 0 20px;
+      border: 3px solid $darkLight;
+      margin-top: -3px;
+      border-right: none;
+      border-top: none;
+      position: absolute;
+      margin-left: -35px;
+      z-index: 99;
+    }
+
+    .verticalLine {
+      width: 30px;
+      transform: rotate(180deg);
+      position: absolute;
+      border: 3px solid $darkLight;
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
+      margin-left: -63px;
+      z-index: 1;
+    }
+
+    img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50px;
+      z-index: 2;
+      // border-bottom: 4px solid $light;
+    }
+  }
+
+  .commentMainContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+
+    .commentContent {
+      display: flex;
+      flex-direction: column;
+      background-color: $darkLight;
+      border-radius: 20px;
+      padding: 16px;
+      row-gap: 10px;
+
+      .commenterFullName {
+        font-size: 15px;
+        color: $primary;
+        font-weight: 800;
+        font-family: $mainFont;
+        text-transform: uppercase;
+      }
+
+      .commentText {
+        font-size: 16px;
+        color: $primary;
+        font-weight: 500;
+        font-family: $mainFont;
+        line-height: 20px;
+      }
+    }
+
+    .commentReactionsContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 20px;
+      margin-top: 10px;
+
+      .commentLikeButton{
+        font-size: 13px;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: none;
+        font-weight: 500;
+        font-family: $mainFont;
+      }
+      .commentReplyButton {
+        font-size: 13px;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: none;
+        font-weight: 500;
+        font-family: $mainFont;
+        color: $grey;
+      }
+
+      .commentLikeButtonLiked{
+        color: $primary;
+      }
+      .commentLikeButtonNotLiked{
+        color: $grey;
+
+      }
+
+      .commentDateLabel {
+        font-size: 13px;
+        color: $grey;
+        font-weight: 400;
+        font-family: $mainFont;
+      }
+    }
+  }
+}
+
+.viewMoreCommentsButton {
+  display: flex;
+  color: $primary;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: $mainFont;
+
+  img {
+    width: 10px;
+    height: 10px;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(84%) saturate(1902%)
+      hue-rotate(221deg) brightness(71%) contrast(93%);
+    margin-right: 5px;
+    transform: scaleX(-1) rotate(180deg);
+  }
+}
+
+@media (max-width: 769px) {
+  .commentContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-top: 20px;
+
+    .commenterProfileImageContainer {
+      display: flex;
+      position: relative;
+
+      .cornerLine {
+        width: 30px;
+        height: 25px;
+        margin-left: -21px;
+        z-index: 1;
+      }
+
+      .verticalLine {
+        width: 45px;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .commentMainContainer {
+      margin-left: 10px;
+
+      .commentContent {
+        .commenterFullName {
+          font-size: 14px;
+        }
+
+        .commentText {
+          font-size: 14px;
+        }
+      }
+
+      .commentReactionsContainer {
+        .commentLikeButton,
+        .commentReplyButton {
+        }
+
+        .commentDateLabel {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .commentContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-top: 20px;
+
+    .commenterProfileImageContainer {
+      display: flex;
+      position: relative;
+
+      .cornerLine {
+        width: 30px;
+        height: 25px;
+        margin-left: -21px;
+        z-index: 1;
+      }
+
+      .verticalLine {
+        width: 45px;
+      }
+
+      img {
+        width: 42.5px;
+        height: 42.5px;
+      }
+    }
+
+    .commentMainContainer {
+      margin-left: 10px;
+
+      .commentContent {
+        white-space: normal;
+        word-break: break-all;
+
+        .commenterFullName {
+        }
+
+        .commentText {
+        }
+      }
+
+      .commentReactionsContainer {
+        .commentLikeButton,
+        .commentReplyButton {
+          font-size: 11px;
+        }
+
+        .commentDateLabel {
+          font-size: 11px;
+
+        }
+      }
+    }
+  }
+}

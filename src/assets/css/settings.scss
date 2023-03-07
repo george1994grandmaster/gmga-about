@@ -1,0 +1,147 @@
+.settingsPage {
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: 100px auto 150px auto;
+  flex-direction: column;
+  align-items: center;
+
+  .settingsPageLabel {
+    font-size: 47px;
+    font-weight: 900;
+    color: $primary;
+    text-transform: uppercase;
+  }
+
+  .settingsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .mountainBannerContainer {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin-left: 60px;
+      justify-content: flex-end;
+    }
+
+    .additionalSettingsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 150px;
+      margin-left: -50px;
+
+      .postsPublicitySettings {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 15px;
+
+        .postsVisibilityLabel {
+          font-size: 20px;
+          color: $primary;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+      }
+
+      .deactivateAccountNavigation {
+        color: $primary;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media (max-width: 1132px) {
+    width: 90%;
+
+    .settingsContainer {
+      width: 100%;
+
+      .mountainBannerContainer {
+        display: flex;
+        flex-direction: column;
+        // width: 70%;
+        // background-color: red;
+        margin-left: 10px;
+        justify-content: flex-end;
+      }
+
+      .additionalSettingsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 150px;
+        margin-left: -50px;
+
+        .postsPublicitySettings {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          row-gap: 15px;
+
+          .postsVisibilityLabel {
+            font-size: 20px;
+            color: $primary;
+            font-weight: 900;
+            text-transform: uppercase;
+          }
+        }
+
+        .deactivateAccountNavigation {
+          color: $primary;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 870px) {
+    .settingsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .mountainBannerContainer {
+        margin: 0;
+        margin-top: 80px;
+        width: 90%;
+      }
+
+      .additionalSettingsContainer {
+        margin: 0;
+        width: 90%;
+        margin-top: 40px;
+        align-items: center;
+
+        .postsPublicitySettings {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          .postsVisibilityLabel {
+            font-size: 6.25vw;
+          }
+        }
+
+        .deactivateAccountNavigation {
+          margin-top: 20px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

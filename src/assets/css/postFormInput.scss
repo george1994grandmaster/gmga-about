@@ -1,0 +1,86 @@
+.postFormInputContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  z-index: 10999;
+  width: 100%;
+  align-items: flex-start;
+  .userProfileImageContainer {
+    img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+    }
+  }
+
+  .postModalUserProfileImageContainer {
+    img {
+      width: 52.5px;
+      height: 52.5px;
+      border-radius: 50%;
+    }
+  }
+
+  .postInput {
+    display: flex;
+    width: 100%;
+    border-radius: 30px;
+    justify-content: center;
+    border: none;
+    background-color: $darkLight;
+    color: $primary;
+    font-size: 16px;
+    font-family: $mainFont;
+    align-items: center;
+    padding: 15px;
+    overflow: hidden;
+    line-height: 1.4;
+    resize: none;
+  }
+
+  .postInput::placeholder {
+    color: $primary;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.9;
+  }
+}
+
+.marginTop {
+  margin-top: 20px;
+}
+
+@media (max-width: 769px) {
+  .commentInputContainer {
+    .userProfileImageContainer {
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .postInput {
+      font-size: 14px;
+      padding: 12px;
+      padding-top: 14px;
+      line-height: 1.25;
+    }
+    .postInput::placeholder {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .commentInputContainer {
+    .postInput {
+      font-size: 11px;
+      padding: 5px;
+      line-height: 1.25;
+    }
+    .postInput::placeholder {
+      font-size: 11px;
+      padding: 12px 14px 12px 12px;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.addPostContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px;
+  row-gap: 20px;
+  background-color: $light;
+  border-radius: 15px;
+  position: relative;
+  .postInputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .addPostButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    .attachButtonsContainer {
+      display: flex;
+      flex-direction: row;
+      .attachFileButton {
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: $mainFont;
+        text-transform: uppercase;
+        align-items: center;
+        color: $primary;
+        border: none;
+        margin-right: 32px;
+        background-color: $light;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+        }
+
+        .attachInformation {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: flex-start;
+        }
+
+        .photosSelected {
+          font-size: 9px;
+          font-weight: 400;
+        }
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+    }
+  }
+  
+
+  @media (max-width: 1250px) {
+    padding: 40px 40px;
+
+    .addPostButtonsContainer {
+      .attachButtonsContainer {
+        .attachFileButton {
+          font-size: 12px;
+          margin-right: 16px;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 769px) {
+    border-radius: 0px;
+    padding: 20px 15px;
+
+    .postInputContainer {
+    }
+
+    .addPostButtonsContainer {
+      flex-direction: column;
+
+      .attachButtonsContainer {
+        margin-bottom: 15px;
+        justify-content: space-around;
+
+        .attachFileButton {
+          img {
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 300px) {
+    .addPostButtonsContainer {
+      .attachButtonsContainer {
+        .attachFileButton {
+          font-size: 11px;
+
+          img {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}

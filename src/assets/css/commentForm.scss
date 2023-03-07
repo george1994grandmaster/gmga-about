@@ -1,0 +1,139 @@
+.commentInputForm {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  z-index: 10999;
+  width: 100%;
+  align-items: flex-start;
+
+  .userProfileImageContainer {
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  .postModalUserProfileImageContainer {
+    img {
+      width: 52.5px;
+      height: 52.5px;
+      border-radius: 50%;
+    }
+  }
+  .commentInputContainer {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    .commentInput {
+      display: flex;
+      width: 100%;
+      border-radius: 30px;
+      justify-content: center;
+      border: none;
+      background-color: $darkLight;
+      color: $primary;
+      font-size: 16px;
+      font-family: $mainFont;
+      align-items: center;
+      padding: 15px;
+      overflow: hidden;
+      line-height: 1.4;
+      padding-right: 45px;
+      resize: none;
+    }
+
+    .commentInput::placeholder {
+      color: $primary;
+      font-weight: 400;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    .commentSubmitButton {
+      display: none;
+      padding: 0;
+      margin: 12.5px 10px 5px 5px;
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      width: 20px;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+        filter: brightness(0) saturate(100%) invert(22%) sepia(84%)
+          saturate(1902%) hue-rotate(221deg) brightness(71%) contrast(93%);
+      }
+    }
+  }
+}
+.commentUploadLoadingContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.marginTop {
+  margin-top: 20px;
+}
+
+@media (max-width: 769px) {
+  .commentInputForm {
+    .userProfileImageContainer {
+      img {
+        width: 42.5px;
+        height: 42.5px;
+      }
+    }
+    .commentInputContainer {
+      .commentInput {
+        font-size: 14px;
+        padding: 12px;
+        line-height: 1.25;
+        padding-right: 45px;
+      }
+
+      .commentInput::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        padding-top: 2px;
+      }
+      .commentSubmitButton {
+        display: flex;
+        // padding: 0;
+        // margin: 0;
+        // margin-right: 5px;
+        // position: absolute;
+        // background-color: transparent;
+        // border: none;
+        // width: 20px;
+        // height: auto;
+        // background-color: red;
+
+        img {
+          // width: 100%;
+          // height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .commentInputForm {
+    .commentInputContainer {
+      white-space: normal;
+      word-break: break-all;
+      .commentInput {
+        white-space: normal;
+        word-break: break-all;
+      }
+      .commentInput::placeholder {
+
+      }
+    }
+  }
+}

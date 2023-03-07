@@ -1,0 +1,73 @@
+.visibilitySelectContainer {
+  z-index: 99;
+
+  .selected {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    color: $primary;
+    width: 250px;
+    border: 1px solid $primary;
+    border-radius: 45px;
+    padding: 10px 15px;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+  .arrowIcon {
+    display: flex;
+    width: 7px;
+  }
+
+  .options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 15px;
+    border: 1px solid $primary;
+    padding: 15px 0px;
+    margin-top: 10px;
+    align-items: flex-start;
+    box-shadow: 0px 0px 31px -7px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    width: 250px;
+    background-color: $light;
+  }
+
+  .optionsShow {
+    display: flex;
+  }
+
+  .singleOption {
+    border: none;
+    display: flex;
+    background-color: transparent;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    font-weight: 600;
+    width: 100%;
+    color: $primary;
+    font-size: 14px;
+  }
+
+  .singleOption:hover {
+    background-color: $primary;
+    color: $light;
+  }
+
+  @media (max-width: 870px) {
+    width: 100%;
+
+    .selected {
+      width: 100%;
+    }
+  }
+}

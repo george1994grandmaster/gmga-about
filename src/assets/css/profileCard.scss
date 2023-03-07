@@ -1,0 +1,238 @@
+.singleUserPostContainer {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-color: $light;
+    break-inside: avoid-column;
+    padding: 25px;
+
+    .singleUserPostHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        .posterProfileImageContainer {
+            width: 60px;
+            margin-right: 14px;
+        }
+
+        .otherPostInformationContainer {
+            .posterName {
+                margin-bottom: 10px;
+                color: $primary;
+                font-size: 15px;
+                font-weight: 900;
+                font-family: $mainFont;
+            }
+
+            .postDate {
+                color: $primary;
+                font-size: 11px;
+                font-weight: 400;
+                font-family: $mainFont;
+            }
+        }
+    }
+
+    .profileCardMainText {
+        margin-bottom: 20px;
+        color: $primary;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: $mainFont;
+    }
+
+    .profileCardImageContainer {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .profileCardReactions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .handleResults {
+            display: flex;
+            justify-content: space-evenly;
+            column-gap: 15px;
+        }
+    }
+
+    .postReactionButtonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .handleResultIcon {
+            display: flex;
+            margin-right: 25px;
+
+            button {
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .singleUserPostContainer {
+        // width: 100%;
+        // float: left;
+        // margin-bottom: 20px;
+        // border-radius: 25px;
+        // background-color: $light;
+        // break-inside: avoid-column;
+        // padding: 25px;
+
+        .singleUserPostHeader {
+            // display: flex;
+            // align-items: center;
+            // margin-bottom: 15px;
+
+            .posterProfileImageContainer {
+                // width: 60px;
+                // margin-right: 14px;
+            }
+
+            .otherPostInformationContainer {
+                .posterName {
+                    // margin-bottom: 10px;
+                    // color: $primary;
+                    // font-size: 15px;
+                    // font-weight: 900;
+                    // font-family: $mainFont;
+                }
+
+                .postDate {
+                    // color: $primary;
+                    // font-size: 11px;
+                    // font-weight: 400;
+                    // font-family: $mainFont;
+                }
+            }
+        }
+
+        .profileCardMainText {
+            // margin-bottom: 20px;
+            // color: $primary;
+            // font-size: 13px;
+            // font-weight: 500;
+            // font-family: $mainFont;
+        }
+
+        .profileCardImageContainer {
+            // display: block;
+            // margin-bottom: 25px;
+        }
+
+        .profileCardReactions {
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+
+            .handleResults {
+                // display: flex;
+                // justify-content: space-evenly;
+            }
+        }
+
+        .postReactionButtonContainer {
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-evenly;
+
+            .handleResultIcon {
+                // display: flex;
+                // margin-right: 25px;
+
+                button {
+                    // border: none;
+                    // background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .singleUserPostContainer {
+        // width: 100%;
+        // float: left;
+        // margin-bottom: 20px;
+        border-radius: 0px;
+        // background-color: $light;
+        // break-inside: avoid-column;
+        // padding: 25px;
+
+        .singleUserPostHeader {
+            // display: flex;
+            // align-items: center;
+            // margin-bottom: 15px;
+
+            .posterProfileImageContainer {
+                // width: 60px;
+                // margin-right: 14px;
+            }
+
+            .otherPostInformationContainer {
+                .posterName {
+                    // margin-bottom: 10px;
+                    // color: $primary;
+                    // font-size: 15px;
+                    // font-weight: 900;
+                    // font-family: $mainFont;
+                }
+
+                .postDate {
+                    // color: $primary;
+                    // font-size: 11px;
+                    // font-weight: 400;
+                    // font-family: $mainFont;
+                }
+            }
+        }
+
+        .profileCardMainText {
+            // margin-bottom: 20px;
+            // color: $primary;
+            // font-size: 13px;
+            // font-weight: 500;
+            // font-family: $mainFont;
+        }
+
+        .profileCardImageContainer {
+            // display: block;
+            // margin-bottom: 25px;
+        }
+
+        .profileCardReactions {
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+
+            .handleResults {
+                // display: flex;
+                // justify-content: space-evenly;
+            }
+        }
+
+        .postReactionButtonContainer {
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-evenly;
+
+            .handleResultIcon {
+                // display: flex;
+                // margin-right: 25px;
+
+                button {
+                    // border: none;
+                    // background-color: transparent;
+                }
+            }
+        }
+    }
+}

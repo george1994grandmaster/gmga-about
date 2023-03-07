@@ -1,0 +1,127 @@
+.postImageGallery {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.pointerClickable {
+  cursor: pointer;
+}
+
+.images1Gallery {
+  display: flex;
+}
+
+.images2Gallery {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+
+  .imageContainer {
+    display: flex;
+    height: auto;
+    width: 50%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+    }
+  }
+}
+
+.images3Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+
+  .imageContainerHorizontal {
+    display: flex;
+    width: 100%;
+    img {
+      width: 100%;
+      aspect-ratio: 2;
+      object-fit: cover;
+      // background-color: blue;
+      border-radius: 10px;
+    }
+  }
+
+  .imageContainer {
+    display: flex;
+    width: calc(50% - 5px);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+
+      border-radius: 10px;
+    }
+  }
+}
+
+.images4Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .imageContainer {
+    display: flex;
+    height: auto;
+    width: calc(50% - 5px);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+    }
+  }
+}
+
+.imagesMultipleGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .imageContainer {
+    display: flex;
+    height: auto;
+    width: calc(50% - 5px);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    .extraImagesCover {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.2;
+      z-index: 1;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+
+    .amountOfExtraImagesLabel {
+      display: flex;
+      position: absolute;
+      opacity: 1;
+      color: white;
+      font-size: 70px;
+      z-index: 99;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+      // background-color: red;
+    }
+  }
+}

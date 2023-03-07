@@ -1,0 +1,389 @@
+.addPostModalContainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+
+  .addPostModalBackground {
+    position: absolute;
+    background-color: gray;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+  }
+
+  .addPostModalLoading {
+    height: 250px;
+  }
+
+  .addPostModal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    background-color: $light;
+    border-radius: 15px;
+    flex-direction: column;
+    position: relative;
+    // height: 250px;
+    justify-content: center;
+
+    .addPostModalHeaderContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      .closePostModalButton {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        border: 2px solid $primary;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+
+        img {
+          width: 55%;
+          height: auto;
+        }
+      }
+    }
+
+    .addPostModalInputsContainer {
+      display: flex;
+      flex-direction: column;
+      padding: 15px 40px;
+      row-gap: 20px;
+      background-color: $light;
+      border-radius: 15px;
+      position: relative;
+
+      .postInputContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+      }
+
+      .addPostButtonsContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        .attachButtonsContainer {
+          display: flex;
+          flex-direction: row;
+
+          .attachFileButton {
+            display: flex;
+            flex-direction: row;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: $mainFont;
+            text-transform: uppercase;
+            align-items: center;
+            color: $primary;
+            border: none;
+            margin-right: 32px;
+            background-color: $light;
+
+            img {
+              width: 20px;
+              height: 20px;
+              margin-right: 20px;
+            }
+
+            .attachInformation {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: flex-start;
+            }
+
+            .photosSelected {
+              font-size: 9px;
+              font-weight: 400;
+            }
+          }
+
+          input[type="file"] {
+            display: none;
+          }
+        }
+
+        .addPostModalButton {
+          font-size: 16px;
+          font-weight: 600;
+          padding: 10px 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .addPostModalContainer {
+    // position: fixed;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    // z-index: 99999;
+
+    .addPostModalBackground {
+      //   position: absolute;
+      //   background-color: gray;
+      //   opacity: 0.6;
+      //   width: 100%;
+      //   height: 100%;
+    }
+
+    .addPostModal {
+      //   display: flex;
+      width: 100%;
+      //   justify-content: flex-end;
+      //   align-items: flex-end;
+      padding: 20px;
+      //   background-color: $light;
+      border-radius: 0px;
+      //   flex-direction: column;
+      //   position: relative;
+      align-items: center;
+
+      .addPostModalHeaderContainer {
+        // display: flex;
+        // justify-content: flex-end;
+        // width: 100%;
+
+        .closePostModalButton {
+
+          // display: flex;
+          // width: 30px;
+          // height: 30px;
+          // border-radius: 100px;
+          // border: 2px solid $primary;
+          // align-items: center;
+          // justify-content: center;
+          img {
+            //   width: 55%;
+            //   height: auto;
+          }
+        }
+      }
+
+      .addPostModalInputsContainer {
+        // display: flex;
+        // flex-direction: column;
+        padding: 15px 0px;
+        // row-gap: 20px;
+        // background-color: $light;
+        // border-radius: 15px;
+        // position: relative;
+
+        .postInputContainer {
+          //   display: flex;
+          //   flex-direction: row;
+          //   align-items: center;
+          //   width: 100%;
+        }
+
+        .addPostButtonsContainer {
+
+          //   display: flex;
+          //   flex-direction: row;
+          //   width: 100%;
+          //   justify-content: space-between;
+          .attachButtonsContainer {
+
+            // display: flex;
+            // flex-direction: row;
+            .attachFileButton {
+              //   display: flex;
+              //   flex-direction: row;
+              //   font-size: 16px;
+              //   font-weight: 600;
+              //   font-family: $mainFont;
+              //   text-transform: uppercase;
+              //   align-items: center;
+              //   color: $primary;
+              //   border: none;
+              //   margin-right: 32px;
+              //   background-color: $light;
+
+              img {
+                // width: 20px;
+                // height: 20px;
+                // margin-right: 20px;
+              }
+
+              .attachInformation {
+                // display: flex;
+                // flex-direction: column;
+                // align-items: flex-end;
+                // justify-content: flex-start;
+              }
+
+              .photosSelected {
+                // font-size: 9px;
+                // font-weight: 400;
+              }
+            }
+
+            input[type="file"] {
+              //   display: none;
+            }
+          }
+
+          .addPostModalButton {
+            // font-size: 16px;
+            // font-weight: 600;
+            // padding: 10px 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .addPostModalContainer {
+    // position: fixed;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+    // z-index: 99999;
+
+    .addPostModalBackground {
+      //   position: absolute;
+      //   background-color: gray;
+      //   opacity: 0.6;
+      //   width: 100%;
+      //   height: 100%;
+    }
+
+    .addPostModal {
+      //   display: flex;
+      // width: 100%;
+      //   justify-content: flex-end;
+      //   align-items: flex-end;
+      // padding: 20px;
+      //   background-color: $light;
+      // border-radius: 0px;
+      //   flex-direction: column;
+      //   position: relative;
+      // align-items: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.3);
+
+      .addPostModalHeaderContainer {
+        // display: flex;
+        // justify-content: flex-end;
+        // width: 100%;
+
+        .closePostModalButton {
+
+          // display: flex;
+          // width: 30px;
+          // height: 30px;
+          // border-radius: 100px;
+          // border: 2px solid $primary;
+          // align-items: center;
+          // justify-content: center;
+          img {
+            //   width: 55%;
+            //   height: auto;
+          }
+        }
+      }
+
+      .addPostModalInputsContainer {
+        // display: flex;
+        // flex-direction: column;
+        //   padding: 10px 0px;
+        // row-gap: 20px;
+        // background-color: $light;
+        // border-radius: 15px;
+        // position: relative;
+        width: 100%;
+
+        .postInputContainer {
+          //   display: flex;
+          //   flex-direction: row;
+          //   align-items: center;
+          //   width: 100%;
+        }
+
+        .addPostButtonsContainer {
+          //   display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+
+          //   width: 100%;
+          //   justify-content: space-between;
+          .attachButtonsContainer {
+            // display: flex;
+            // flex-direction: row;
+            justify-content: space-around;
+
+            .attachFileButton {
+              //   display: flex;
+              //   flex-direction: row;
+              font-size: 13px;
+              //   font-weight: 600;
+              //   font-family: $mainFont;
+              //   text-transform: uppercase;
+              //   align-items: center;
+              //   color: $primary;
+              //   border: none;
+              margin-right: 0px;
+              //   background-color: $light;
+
+              img {
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+              }
+
+              .attachInformation {
+                // display: flex;
+                // flex-direction: column;
+                // align-items: flex-end;
+                // justify-content: flex-start;
+              }
+
+              .photosSelected {
+                // font-size: 9px;
+                // font-weight: 400;
+              }
+            }
+
+            input[type="file"] {
+              //   display: none;
+            }
+          }
+
+          .addPostModalButton {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 40px;
+          }
+        }
+      }
+    }
+  }
+}

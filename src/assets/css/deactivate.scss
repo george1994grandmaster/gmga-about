@@ -1,0 +1,198 @@
+// .deactivatePageBlur {}
+
+// .deactivatePageContainer:not(.deactivationModal) {
+//   filter: blur(5px);
+// }
+
+.deactivationModal {
+  display: flex;
+  background-color: $light;
+  height: auto;
+  width: 50%;
+  position: absolute;
+  flex-direction: column;
+  box-shadow: 0px 3px 13px 4px #2938961a;
+  align-items: center;
+  z-index: 99;
+  margin-left: calc(25%);
+  margin-top: calc(10%);
+  border-radius: 30px;
+
+  .deactivationModalHeader {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 30px 30px 0px 0px;
+  }
+
+  .deactivationModalMainContainer {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    text-align: center;
+    flex-direction: column;
+
+    .deactivationConfirmationQuestion {
+      font-size: 20px;
+      font-weight: 900;
+      color: $primary;
+      line-height: 25px;
+    }
+
+    .modalButtonsContainer {
+      display: flex;
+      width: 80%;
+      margin-top: 60px;
+      flex-direction: row;
+      column-gap: 30px;
+      justify-content: center;
+    }
+  }
+}
+
+.deactivateModalBackground {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 200vh;
+  background-color: gray;
+  opacity: 0.3;
+}
+
+.deactivatePageContainer {
+  @extend .container;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $mainContainerMB;
+
+
+
+  .backButtonContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .deactivateForm {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+
+
+
+    .deactivateFormName {
+      font-size: 20px;
+      font-weight: 900;
+      color: $primary;
+    }
+
+
+    .fieldSetMarginSmall {
+      margin: 40px 0px 20px 0px;
+    }
+
+    .fieldSetMarginNormal {
+      margin: 40px;
+    }
+
+    .fieldSetContainer {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      width: 100%;
+      align-items: center;
+
+      .deactivateLabel {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-family: $mainFont;
+        font-size: 14px;
+        font-weight: 600;
+        color: $primary;
+      }
+
+      .deactivateInput {
+        border-radius: 45px;
+        border: 1px solid $primary;
+        padding: 10px 15px;
+        color: $primary;
+        margin-top: 15px;
+        width: 250px;
+      }
+
+      .deactivateInput:focus {
+        outline: none !important;
+      }
+
+      .deactivateNotificationContainer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .deactivationText {
+          font-size: 11px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: red;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 769px) {
+    .backButtonContainer {
+      display: none;
+    }
+
+    margin: 0;
+    padding: 0;
+
+    .deactivateForm {
+      margin-bottom: 100px;
+
+      .deactivateFormName {
+        font-size: 18px;
+      }
+
+      .deactivationModal {
+        width: 100%;
+        padding-bottom: 20px;
+
+        .deactivationModalHeader {
+          // display: flex;
+          // justify-content: flex-end;
+          // width: 100%;
+          // margin: 30px 30px 0px 0px;
+        }
+
+        .deactivationModalMainContainer {
+          width: 90%;
+          margin-top: 30px;
+          margin-bottom: 70px;
+
+          .deactivationConfirmationQuestion {
+            font-size: 16px;
+          }
+
+          .modalButtonsContainer {
+            flex-direction: row;
+            row-gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

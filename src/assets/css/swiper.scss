@@ -1,0 +1,118 @@
+.swiper {
+  margin: 0 -30px
+}
+
+.swiper-slide {
+  .slideImg {
+    border-radius: 10px;
+  }
+}
+
+.swiper-settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  text-align: end;
+  z-index: 9999;
+}
+
+.settingsOption {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-bottom: 7px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+
+  &:hover::after {
+    width: 100%;
+    //transition: all 0.5s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0;
+    height: 1px;
+    background-color: $primary;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.swiperCol {
+  margin: 0 30px;
+
+  img {
+    
+  }
+}
+
+.settingsOptions {
+  display: none;
+  padding: 8px 12px 3px 12px;
+  border-radius: 5px;
+  background-color: $darkLight;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+
+  &.active {
+    display: block;
+  }
+
+  .share {
+    display: block;
+    color: $primary;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .delete {
+    display: block;
+    color: $primary;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .settingsImg {
+    margin-right: 5px;
+  }
+
+  .settingsSpace {
+    padding-bottom: 7px;
+  }
+}
+
+.settingsSvg {
+  display: block;
+  position: relative;
+  width: 30px;
+
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .slideImg {
+    height: 45vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slideImg {
+    height: 18vw;
+  }
+}
+
+@media (min-width: 2400px) {
+  .slideImg {
+    height: 30vh;
+  }
+}

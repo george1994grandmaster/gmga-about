@@ -1,0 +1,925 @@
+.profileBanner {
+  position: relative;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+
+
+.profileContent {
+  margin-top: -12%;
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 25%;
+}
+
+.editUpdateContent {
+  display: none;
+  margin-right: 50px;
+  //padding-top: 10%;
+  //padding-bottom: 10%;
+
+  z-index: 9999;
+}
+
+.profileFlexible {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.mainProfile {
+  position: relative;
+  width: 16vw;
+  margin-right: 10px;
+}
+
+.profileText {
+  margin-right: 50px;
+  font-size: 3.1vw;
+  font-weight: 900;
+  color: $primary;
+}
+
+
+
+.photoprofileContent {
+  width: 50px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+.profileInnerBanner {
+  position: relative;
+  padding-bottom: 3%;
+}
+
+.mainBannerImg {
+  height: 385px;
+  border-radius: 45px;
+}
+
+.photoOptionsContainer {
+  position: absolute;
+  top: 65%;
+  right: -29vw;
+  width: 60vw;
+
+  .photoOptions {
+    &.visible::after {
+      position: absolute;
+      z-index: 0;
+      width: 14px;
+      height: 14px;
+      background-color: white;
+      top: -8px;
+      left: calc(50% - 7px);
+      transform: rotate(45deg);
+      border-top: 1px solid #293896;
+      border-left: 1px solid #293896;
+    }
+  }
+
+  .photoOptionsContent {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.photoOptionsContent {
+  max-width: 260px;
+}
+
+.coverPhoto {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  width: 60vw;
+  top: 82%;
+  right: 3%;
+
+  .photoOptions {
+    &.visible::after {
+      position: absolute;
+      z-index: 0;
+      width: 14px;
+      height: 14px;
+      background-color: white;
+      top: -8px;
+      right: 20px;
+      transform: rotate(45deg);
+      border-top: 1px solid #293896;
+      border-left: 1px solid #293896;
+    }
+  }
+
+  .photoProfileCenter {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .photoOptionsContent {
+    width: 100%;
+  }
+}
+
+.photoOptions {
+  display: none;
+  position: relative;
+  padding: 16px 17px;
+  border-radius: 15px;
+  background-color: $light;
+  visibility: hidden;
+  border: 1px solid #293896;
+
+  &.visible {
+    display: block;
+    visibility: visible;
+    z-index: 9999;
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .attachFileButton {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: inline-flex;
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 0;
+      height: 1px;
+      background-color: $primary;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+}
+
+.photoprofileContent {
+  width: 16%;
+  z-index: 2;
+}
+
+.photoProfileCenter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.photoProfile {
+  display: block;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+
+  // img {
+  //   display: block;
+  //   height: 100%;
+  // }
+}
+
+.mainProfileContainer {
+  padding-top: $mainContainerPT;
+}
+
+.profile-skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+
+  .usersProfileSkills {
+    font-size: 14px;
+    font-weight: 900;
+  }
+}
+
+.profileContacts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  width: 80%;
+  row-gap: 25px;
+
+  .profileContactItem {
+    display: flex;
+    align-items: center;
+    width: 300px;
+
+    .iconContainer {
+      width: 25px;
+      margin-right: 10px;
+
+      img {
+        display: block;
+      }
+    }
+
+    p {
+      color: $primary;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+
+
+.profilBannerBelow {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.skills-content {
+  &.profile {
+    margin-bottom: 62px;
+  }
+}
+
+
+
+.postCardsTilte {
+  margin-bottom: 30px;
+  color: $primary;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+
+// .postCard {
+//   width: 100%;
+//   float: left;
+//   margin-bottom: 20px;
+//   border-radius: 25px;
+//   background-color: $light;
+//   break-inside: avoid-column;
+// }
+
+.postCard:nth-child(3n + 1) {
+  clear: left;
+}
+
+// .postCardBody {
+//   padding: 25px;
+// }
+
+// .postCardProfile {
+//   width: 60px;
+//   margin-right: 14px;
+// }
+
+// .postCardTitle {
+//   margin-bottom: 10px;
+//   color: $primary;
+//   font-size: 15px;
+//   font-weight: 900;
+// }
+
+// .cardProfileFlexible {
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 15px;
+// }
+
+// .postCardDate {
+//   color: $primary;
+//   font-size: 11px;
+//   font-weight: 400;
+// }
+
+// .postCardText {
+//   margin-bottom: 20px;
+//   color: $primary;
+//   font-size: 13px;
+//   font-weight: 500;
+// }
+
+
+.handleViews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+// .handleResults {
+//   display: flex;
+//   justify-content: space-evenly;
+// }
+
+.handleResultItem {
+  display: flex;
+}
+
+.usersViews {
+  margin-right: 16px;
+}
+
+.usersHandle {
+  margin-right: 22px;
+}
+
+.handleCount {
+  font-size: 13px;
+  font-weight: 400;
+  color: $grey;
+}
+
+// .handleResulIcon {
+//   display: flex;
+//   margin-right: 25px;
+
+//   button {
+//     border: none;
+//     background-color: transparent;
+//   }
+// }
+
+.handleResultItem {
+  margin-right: 16px;
+}
+
+.handleIcons {
+  display: flex;
+}
+
+.viewIcon {
+  margin-right: 6px;
+}
+
+.showCards {
+  margin: 60px 0;
+  text-align: center;
+
+  button {
+    padding: 17px 27px;
+    border: 2px solid $primary;
+    border-radius: 28px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $primary;
+      color: $light;
+    }
+  }
+}
+
+// .profileCardReactions {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .postReactionButtonContainer {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-evenly;
+// }
+
+.handleResulIcon {
+  margin-right: 15px;
+
+  & button {
+    width: 20px;
+  }
+}
+
+.handleSize {
+  position: relative;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.skillsTitle {
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+
+.profileContent {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 1200px) {
+
+  .profileContent {
+    margin-top: -16%;
+  }
+
+  .mainProfile {
+    width: 30vw;
+  }
+
+  .postCardBody {
+    padding: 15px;
+  }
+
+  .homeCardFont {
+    font-size: 15px;
+  }
+
+
+
+  .profileText {
+    font-size: 4vw;
+  }
+
+}
+
+// @media (max-width: 720px) {
+//   .photoprofileContent {
+//     width: 10%;
+//   }
+// }
+@media (max-width: 720px) {
+  .profilBannerBelow {
+    padding-top: 30px;
+  }
+
+  .postCardsContent {
+    column-count: 1;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .photoOptionsContainer {
+    display: flex;
+    justify-content: flex-end;
+    right: -45vw;
+    width: 90vw;
+  }
+
+  .mainBannerImg {
+    height: 200px;
+  }
+
+  .coverPhoto {
+    width: 90vw;
+  }
+
+  .showCards {
+    button {
+      width: 100%;
+    }
+  }
+
+  .photoOptions {
+    // display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: $light;
+    //margin-left: 70px;
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .photoOptions {
+    a {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+.profilBannerBelow {
+  padding-bottom: 70px;
+}
+
+.postCardsContent {
+  padding-bottom: 40px;
+}
+
+@media (max-width: 500px) {
+
+  .profileFlexible {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mainProfile {
+    width: 45%;
+  }
+
+  .profileContent {
+    margin-top: -16%;
+  }
+
+  .profileText {
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .profileCardReactions {
+    flex-direction: column-reverse;
+  }
+
+  .postReactionButtonContainer {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .handleResults {
+    width: 100%;
+  }
+}
+
+@media (min-width: 720px) {
+  .postCardsContent {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .postCardsContent {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 2400px) {
+
+  .mainProfile {
+    width: auto;
+  }
+
+  .profileText {
+    font-size: 60px;
+  }
+
+  .profileContent {
+    margin-top: -10%;
+  }
+
+  .photoOptionsContainer {
+    width: 100%;
+    right: -45%;
+  }
+
+  .coverPhoto {
+    width: 20%;
+    top: 85%;
+  }
+}
+
+.profilePage {
+  .profileBannersContainer {
+    display: flex;
+    display: flex;
+    padding: 0 75px;
+    flex-direction: column;
+
+    .coverPhotoContainer {
+      display: flex;
+      object-fit: contain;
+      position: relative;
+
+      img {
+        border-radius: 45px;
+        border: 2px solid $light;
+        height: 385px;
+      }
+    }
+
+    .profilePhotoAndNameContainer {
+      display: flex;
+      flex-direction: row;
+
+      .profilePhotoContainer {
+        display: flex;
+        position: relative;
+        margin-top: -100px;
+        padding-left: 75px;
+
+        .profileImage {
+          display: flex;
+          position: relative;
+          width: 200px;
+          height: 200px;
+          border: none;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+          background-color: transparent;
+
+          img {
+            border-radius: 100px;
+            border: 3px solid $light;
+          }
+        }
+      }
+
+      .nameContainer {
+        display: flex;
+        padding: 0px 5px 0px 20px;
+        height: 100px;
+        align-items: center;
+        margin-top: -20px;
+        justify-content: flex-start;
+
+        .name {
+          display: flex;
+          margin-right: 50px;
+          padding-top: 11px;
+          padding-left: 5px;
+          font-size: 40px;
+          font-weight: 900;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .userInformationContainer {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+
+    .userSkillsLabel {
+      margin-bottom: 30px;
+      font-size: 25px;
+      font-weight: 700;
+      font-family: $mainFont;
+      color: $primary;
+    }
+
+    .userSkillsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 50px;
+
+      .usersProfileSkills {
+        font-size: 14px;
+        font-weight: 900;
+      }
+    }
+
+    .userProfileContactsContainer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      width: 80%;
+      row-gap: 25px;
+
+      .userProfileContactItem {
+        display: flex;
+        align-items: center;
+        width: 300px;
+
+        .profileIconContainer {
+          width: 25px;
+          margin-right: 10px;
+
+          img {
+            display: block;
+          }
+        }
+
+        .profileContactsText {
+          color: $primary;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .profileAboutContent {
+      display: flex;
+      flex-direction: column;
+
+      .profileAboutLabel {
+        margin-bottom: 30px;
+        color: $primary;
+        font-size: 25px;
+        font-weight: 900;
+        font-family: $mainFont;
+        text-transform: uppercase;
+      }
+
+      .profileAboutText {
+        margin-bottom: 60px;
+        color: $primary;
+        font-family: $mainFont;
+        line-height: 23px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .profileCardsContainer {
+    margin-top: 60px;
+    padding-left: 150px;
+    padding-right: 150px;
+
+    .profileCardsLabel {
+      margin-bottom: 30px;
+      color: $primary;
+      font-size: 25px;
+      font-weight: 900;
+      font-family: $mainFont;
+    }
+
+    .profileCards {
+      position: relative;
+      width: 100%;
+
+    }
+
+    .showMorePostsButtonContainer {
+      margin: 60px 0;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      .showMorePostsButton {
+        padding: 17px 27px;
+        border: 2px solid $primary;
+        border-radius: 28px;
+        background-color: transparent;
+        font-size: 15px;
+        font-weight: 600;
+
+        &:active {
+          background-color: $primary;
+          color: $light;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .profilePage {
+    .profileBannersContainer {
+      padding: 0;
+
+      .coverPhotoContainer {
+        img {
+          border-radius: 0px;
+          height: 270px;
+
+        }
+      }
+
+      .profilePhotoAndNameContainer {
+        padding-left: 30px;
+        flex-direction: column;
+
+        .profilePhotoContainer {
+          margin-top: -105px;
+          padding-left: 0px;
+
+          .profileImage {
+            width: 140px;
+            height: 140px;
+          }
+        }
+
+        .nameContainer {
+          padding-left: 0px;
+
+          .name {
+            padding-left: 0px;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    .userInformationContainer {
+      padding: 30px 30px 50px 30px;
+
+      .userProfileContactsContainer {
+        width: 100%;
+        column-gap: 25px;
+
+        .userProfileContactItem {
+          width: 300px;
+        }
+      }
+    }
+
+    .profileCardsLabel {
+      padding-left: 0px;
+    }
+
+    .profileCardsContainer {
+      margin-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .profilePage {
+    .profileBannersContainer {
+      padding: 0;
+
+      .coverPhotoContainer {
+        img {
+          border-radius: 0px;
+        }
+      }
+
+      .profilePhotoAndNameContainer {
+        .profilePhotoContainer {
+          .profileImage {
+            img {}
+          }
+        }
+
+        .nameContainer {
+          .name {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .userInformationContainer {
+      padding-top: 0px;
+
+      .userSkillsLabel {}
+
+      .userSkillsContainer {
+        .usersProfileSkills {}
+      }
+
+      .userProfileContactsContainer {
+        width: 100%;
+        column-gap: 25px;
+
+        .userProfileContactItem {
+          width: 300px;
+
+          .profileIconContainer {
+            img {}
+          }
+
+          .profileContactsText {}
+        }
+      }
+
+      .profileAboutContent {
+        .profileAboutLabel {}
+
+        .profileAboutText {}
+      }
+    }
+
+    .profileCardsLabel {
+      padding-left: 30px;
+    }
+
+    .profileCardsContainer {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
